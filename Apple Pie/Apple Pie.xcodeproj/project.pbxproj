@@ -13,6 +13,7 @@
 		C02064B5245221D700BF97F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C02064B3245221D700BF97F1 /* Main.storyboard */; };
 		C02064B7245221D900BF97F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C02064B6245221D900BF97F1 /* Assets.xcassets */; };
 		C02064BA245221D900BF97F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C02064B8245221D900BF97F1 /* LaunchScreen.storyboard */; };
+		C02064D22456138A00BF97F1 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02064D12456138A00BF97F1 /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C02064B6245221D900BF97F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C02064B9245221D900BF97F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C02064BB245221D900BF97F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C02064D12456138A00BF97F1 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				C02064B6245221D900BF97F1 /* Assets.xcassets */,
 				C02064B8245221D900BF97F1 /* LaunchScreen.storyboard */,
 				C02064BB245221D900BF97F1 /* Info.plist */,
+				C02064D12456138A00BF97F1 /* Game.swift */,
 			);
 			path = "Apple Pie";
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				C02064B2245221D700BF97F1 /* ViewController.swift in Sources */,
 				C02064AE245221D700BF97F1 /* AppDelegate.swift in Sources */,
 				C02064B0245221D700BF97F1 /* SceneDelegate.swift in Sources */,
+				C02064D22456138A00BF97F1 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
