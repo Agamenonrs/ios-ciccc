@@ -36,44 +36,12 @@ class DetailsViewController: UIViewController {
         
         // CREATE LABELS
         
-        let countryLabel = UILabel()
-        countryLabel.text = "Country"
-        countryLabel.font = UIFont(name: "Helvetica Neue", size: 20)
-        countryLabel.translatesAutoresizingMaskIntoConstraints = false
+        let countryStack = createLabelGroup(title: "Country", labelValue: city.name)
+        let cityStack = createLabelGroup(title: "City", labelValue: city.name)
+        let temperatureStack = createLabelGroup(title: "Temparature", labelValue: String(city.temp))
+        let summaryStack = createLabelGroup(title: "Summary", labelValue: city.summary)
         
-        let country = UILabel()
-        country.text = city.name
-        country.font = UIFont(name: "Helvetica Neue", size: 20)
-        country.translatesAutoresizingMaskIntoConstraints = false
-        
-        let countryStack = UIStackView(arrangedSubviews: [countryLabel,country])
-        countryStack.translatesAutoresizingMaskIntoConstraints = false
-        countryStack.axis = .vertical
-        countryStack.alignment = .center
-        countryStack.distribution = .equalSpacing
-        countryStack.spacing = 10
-        view.addSubview(countryStack)
-    
-        let cityLabel = UILabel()
-        cityLabel.text = "City"
-        cityLabel.font = UIFont(name: "Helvetica Neue", size: 20)
-        cityLabel.translatesAutoresizingMaskIntoConstraints = false
-        
-        let cityNameLabel = UILabel()
-        cityNameLabel.text = city.name
-        cityNameLabel.font = UIFont(name: "Helvetica Neue", size: 20)
-        cityNameLabel.translatesAutoresizingMaskIntoConstraints = false
-        
-        let cityStack = UIStackView(arrangedSubviews: [cityLabel,cityNameLabel])
-        cityStack.translatesAutoresizingMaskIntoConstraints = false
-        cityStack.axis = .vertical
-        cityStack.alignment = .center
-        cityStack.distribution = .equalSpacing
-        cityStack.spacing = 10
-        view.addSubview(cityStack)
-        
-        
-        let mainStack = UIStackView(arrangedSubviews: [countryStack,cityStack])
+        let mainStack = UIStackView(arrangedSubviews: [countryStack,cityStack,temperatureStack,summaryStack])
         mainStack.translatesAutoresizingMaskIntoConstraints = false
         mainStack.axis = .vertical
         mainStack.alignment = .center
@@ -91,7 +59,6 @@ class DetailsViewController: UIViewController {
     
     func createLabelGroup(title : String, labelValue : String)-> UIStackView{
         let labelTitle = createLabel(label: title)
-        
         let value = createLabel(label: labelValue)
         
         let stack = UIStackView(arrangedSubviews: [labelTitle,value])
@@ -100,7 +67,6 @@ class DetailsViewController: UIViewController {
         stack.alignment = .center
         stack.distribution = .equalSpacing
         stack.spacing = 10
-        view.addSubview(stack)
         return stack
     }
     
