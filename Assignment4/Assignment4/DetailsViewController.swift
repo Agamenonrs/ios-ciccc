@@ -34,7 +34,7 @@ class DetailsViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         
-        // CRIANDO LABEL
+        // CREATE LABELS
         
         let countryLabel = UILabel()
         countryLabel.text = "Country"
@@ -42,52 +42,74 @@ class DetailsViewController: UIViewController {
         countryLabel.translatesAutoresizingMaskIntoConstraints = false
         
         let country = UILabel()
-        country.text = "Canada"
+        country.text = city.name
         country.font = UIFont(name: "Helvetica Neue", size: 20)
         country.translatesAutoresizingMaskIntoConstraints = false
-        /*
-        let country = UILabel(frame: CGRect(x: view.bounds.width / 2 - 150, y: view.bounds.height / 2 - 200, width: 300, height: 50))
-        country.text = "Canada"
-        country.textAlignment = .center
-        country.font = UIFont(name: "Helvetica Neue", size: 20)
- */
-        //view.addSubview(countryLabel)
-        //view.addSubview(country)
-       
-        // FIM DO LABEL
-       /*
-        cityButton.setTitle(city.name, for: .normal)
-        flagButton.setTitle(city.name, for: .normal)
-        //print(this is the icon \(city.icon)
-        print("this is the icon\(city.icon)")
-        flagButton.setImage(UIImage(systemName: city.icon), for: .normal)
-        navigationController?.title = city.name
-         */
         
-        let stackDetails = UIStackView(arrangedSubviews: [countryLabel,country])
-           stackDetails.translatesAutoresizingMaskIntoConstraints = false
-           stackDetails.axis = .vertical
-           stackDetails.alignment = .center
-           stackDetails.distribution = .equalSpacing
-           stackDetails.spacing = 10
-           view.addSubview(stackDetails)
+        let countryStack = UIStackView(arrangedSubviews: [countryLabel,country])
+        countryStack.translatesAutoresizingMaskIntoConstraints = false
+        countryStack.axis = .vertical
+        countryStack.alignment = .center
+        countryStack.distribution = .equalSpacing
+        countryStack.spacing = 10
+        view.addSubview(countryStack)
+    
+        let cityLabel = UILabel()
+        cityLabel.text = "City"
+        cityLabel.font = UIFont(name: "Helvetica Neue", size: 20)
+        cityLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        let cityNameLabel = UILabel()
+        cityNameLabel.text = city.name
+        cityNameLabel.font = UIFont(name: "Helvetica Neue", size: 20)
+        cityNameLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        let cityStack = UIStackView(arrangedSubviews: [cityLabel,cityNameLabel])
+        cityStack.translatesAutoresizingMaskIntoConstraints = false
+        cityStack.axis = .vertical
+        cityStack.alignment = .center
+        cityStack.distribution = .equalSpacing
+        cityStack.spacing = 10
+        view.addSubview(cityStack)
+        
+        
+        let mainStack = UIStackView(arrangedSubviews: [countryStack,cityStack])
+        mainStack.translatesAutoresizingMaskIntoConstraints = false
+        mainStack.axis = .vertical
+        mainStack.alignment = .center
+        mainStack.distribution = .equalSpacing
+        mainStack.spacing = 20
+        view.addSubview(mainStack)
+        
         NSLayoutConstraint.activate([
-          stackDetails.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-          stackDetails.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+          mainStack.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+          mainStack.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+          
         ])
-
-           
-//           NSLayoutConstraint.activate([
-//             stackDetails.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-//             stackDetails.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-//             countryLabel.heightAnchor.constraint(equalToConstant: 100),
-//             countryLabel.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.6),
-//             country.heightAnchor.constraint(equalToConstant: 100),
-//             country.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.6)
-//
-//           ])
+  
+    }
+    
+    func createLabelGroup(title : String, labelValue : String)-> UIStackView{
+        let labelTitle = createLabel(label: title)
         
-  }
- 
-
+        let value = createLabel(label: labelValue)
+        
+        let stack = UIStackView(arrangedSubviews: [labelTitle,value])
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        stack.axis = .vertical
+        stack.alignment = .center
+        stack.distribution = .equalSpacing
+        stack.spacing = 10
+        view.addSubview(stack)
+        return stack
+    }
+    
+    func createLabel(label : String )-> UILabel{
+        let country = UILabel()
+        country.text = label
+        country.font = UIFont(name: "Helvetica Neue", size: 20)
+        country.translatesAutoresizingMaskIntoConstraints = false
+        return country
+    }
+    
 }
