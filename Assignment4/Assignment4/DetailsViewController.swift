@@ -17,7 +17,8 @@ class DetailsViewController: UIViewController {
         view.backgroundColor = .white
         
         // CREATE LABELS
-        let countryStack = createLabelGroup(title: "Country", labelValue: city.icon)
+        
+        let countryStack = createCoutryLabelGroup(title: "Country", labelValue: city.icon)
         let cityStack = createLabelGroup(title: "City", labelValue: city.name)
         let temperatureStack = createLabelGroup(title: "Temparature", labelValue: String(city.temp))
         let summaryStack = createLabelGroup(title: "Summary", labelValue: city.summary)
@@ -35,7 +36,29 @@ class DetailsViewController: UIViewController {
           mainStack.centerYAnchor.constraint(equalTo: view.centerYAnchor),
           
         ])
+ 
   
+    }
+    
+    func createFlagImage(imageName : String)-> UIImageView{
+        let image = UIImageView()
+        image.image = UIImage(named: "\(imageName).png")
+        image.translatesAutoresizingMaskIntoConstraints = false //You need to call this property so the image is added to
+        return image
+    }
+    
+    func createCoutryLabelGroup(title : String, labelValue : String)-> UIStackView{
+        let labelTitle = createLabel(label: title)
+        let flag = createFlagImage(imageName: labelValue)
+        //let value = createLabel(label: labelValue)
+        
+        let stack = UIStackView(arrangedSubviews: [labelTitle,flag])
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        stack.axis = .vertical
+        stack.alignment = .center
+        stack.distribution = .equalSpacing
+        stack.spacing = 10
+        return stack
     }
     
     func createLabelGroup(title : String, labelValue : String)-> UIStackView{
