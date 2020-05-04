@@ -12,31 +12,12 @@ class DetailsViewController: UIViewController {
     
     var city : City!
     
-    
-    var cityButton: UIButton = {
-      let btn = UIButton(type: .system)
-      btn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
-        btn.backgroundColor = .white
-      btn.translatesAutoresizingMaskIntoConstraints = false
-      return btn
-    }()
-    
-    var flagButton: UIButton = {
-      let btn = UIButton(type: .system)
-      btn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
-        btn.backgroundColor = .white
-      btn.translatesAutoresizingMaskIntoConstraints = false
-      return btn
-    }()
-      
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         
         // CREATE LABELS
-        
-        let countryStack = createLabelGroup(title: "Country", labelValue: city.name)
+        let countryStack = createLabelGroup(title: "Country", labelValue: city.icon)
         let cityStack = createLabelGroup(title: "City", labelValue: city.name)
         let temperatureStack = createLabelGroup(title: "Temparature", labelValue: String(city.temp))
         let summaryStack = createLabelGroup(title: "Summary", labelValue: city.summary)
