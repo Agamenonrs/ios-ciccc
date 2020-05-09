@@ -7,33 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C0403D0C24647764006D2C7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0403D0B24647764006D2C7B /* AppDelegate.swift */; };
-		C0403D0E24647764006D2C7B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0403D0D24647764006D2C7B /* SceneDelegate.swift */; };
-		C0403D1024647764006D2C7B /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0403D0F24647764006D2C7B /* IntroductionViewController.swift */; };
-		C0403D1324647764006D2C7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0403D1124647764006D2C7B /* Main.storyboard */; };
-		C0403D1524647768006D2C7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0403D1424647768006D2C7B /* Assets.xcassets */; };
-		C0403D1824647768006D2C7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0403D1624647768006D2C7B /* LaunchScreen.storyboard */; };
-		C0403D2024649307006D2C7B /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0403D1F24649307006D2C7B /* QuestionViewController.swift */; };
-		C0403D2224649345006D2C7B /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0403D2124649345006D2C7B /* ResultsViewController.swift */; };
-		C0403D242465077D006D2C7B /* QuestionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0403D232465077D006D2C7B /* QuestionData.swift */; };
+		C0801DFF24665D56001D53CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0801DFE24665D56001D53CE /* AppDelegate.swift */; };
+		C0801E0124665D56001D53CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0801E0024665D56001D53CE /* SceneDelegate.swift */; };
+		C0801E0324665D56001D53CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0801E0224665D56001D53CE /* ViewController.swift */; };
+		C0801E0624665D56001D53CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0801E0424665D56001D53CE /* Main.storyboard */; };
+		C0801E0824665D59001D53CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0801E0724665D59001D53CE /* Assets.xcassets */; };
+		C0801E0B24665D59001D53CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0801E0924665D59001D53CE /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C0403D0824647764006D2C7B /* PersonalityQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonalityQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C0403D0B24647764006D2C7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C0403D0D24647764006D2C7B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C0403D0F24647764006D2C7B /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
-		C0403D1224647764006D2C7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C0403D1424647768006D2C7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C0403D1724647768006D2C7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		C0403D1924647768006D2C7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C0403D1F24649307006D2C7B /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
-		C0403D2124649345006D2C7B /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
-		C0403D232465077D006D2C7B /* QuestionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionData.swift; sourceTree = "<group>"; };
+		C0801DFB24665D56001D53CE /* TipCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0801DFE24665D56001D53CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C0801E0024665D56001D53CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C0801E0224665D56001D53CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C0801E0524665D56001D53CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C0801E0724665D59001D53CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C0801E0A24665D59001D53CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C0801E0C24665D59001D53CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C0403D0524647764006D2C7B /* Frameworks */ = {
+		C0801DF824665D56001D53CE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,75 +37,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C0403CFF24647763006D2C7B = {
+		C0801DF224665D56001D53CE = {
 			isa = PBXGroup;
 			children = (
-				C0403D0A24647764006D2C7B /* PersonalityQuiz */,
-				C0403D0924647764006D2C7B /* Products */,
+				C0801DFD24665D56001D53CE /* TipCalculator */,
+				C0801DFC24665D56001D53CE /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		C0403D0924647764006D2C7B /* Products */ = {
+		C0801DFC24665D56001D53CE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C0403D0824647764006D2C7B /* PersonalityQuiz.app */,
+				C0801DFB24665D56001D53CE /* TipCalculator.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C0403D0A24647764006D2C7B /* PersonalityQuiz */ = {
+		C0801DFD24665D56001D53CE /* TipCalculator */ = {
 			isa = PBXGroup;
 			children = (
-				C0403D0B24647764006D2C7B /* AppDelegate.swift */,
-				C0403D0D24647764006D2C7B /* SceneDelegate.swift */,
-				C0403D0F24647764006D2C7B /* IntroductionViewController.swift */,
-				C0403D1F24649307006D2C7B /* QuestionViewController.swift */,
-				C0403D2124649345006D2C7B /* ResultsViewController.swift */,
-				C0403D1124647764006D2C7B /* Main.storyboard */,
-				C0403D1424647768006D2C7B /* Assets.xcassets */,
-				C0403D1624647768006D2C7B /* LaunchScreen.storyboard */,
-				C0403D1924647768006D2C7B /* Info.plist */,
-				C0403D232465077D006D2C7B /* QuestionData.swift */,
+				C0801DFE24665D56001D53CE /* AppDelegate.swift */,
+				C0801E0024665D56001D53CE /* SceneDelegate.swift */,
+				C0801E0224665D56001D53CE /* ViewController.swift */,
+				C0801E0424665D56001D53CE /* Main.storyboard */,
+				C0801E0724665D59001D53CE /* Assets.xcassets */,
+				C0801E0924665D59001D53CE /* LaunchScreen.storyboard */,
+				C0801E0C24665D59001D53CE /* Info.plist */,
 			);
-			path = PersonalityQuiz;
+			path = TipCalculator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C0403D0724647764006D2C7B /* PersonalityQuiz */ = {
+		C0801DFA24665D56001D53CE /* TipCalculator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C0403D1C24647768006D2C7B /* Build configuration list for PBXNativeTarget "PersonalityQuiz" */;
+			buildConfigurationList = C0801E0F24665D59001D53CE /* Build configuration list for PBXNativeTarget "TipCalculator" */;
 			buildPhases = (
-				C0403D0424647764006D2C7B /* Sources */,
-				C0403D0524647764006D2C7B /* Frameworks */,
-				C0403D0624647764006D2C7B /* Resources */,
+				C0801DF724665D56001D53CE /* Sources */,
+				C0801DF824665D56001D53CE /* Frameworks */,
+				C0801DF924665D56001D53CE /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = PersonalityQuiz;
-			productName = PersonalityQuiz;
-			productReference = C0403D0824647764006D2C7B /* PersonalityQuiz.app */;
+			name = TipCalculator;
+			productName = TipCalculator;
+			productReference = C0801DFB24665D56001D53CE /* TipCalculator.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		C0403D0024647763006D2C7B /* Project object */ = {
+		C0801DF324665D56001D53CE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1140;
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = Agamenon;
 				TargetAttributes = {
-					C0403D0724647764006D2C7B = {
+					C0801DFA24665D56001D53CE = {
 						CreatedOnToolsVersion = 11.4.1;
 					};
 				};
 			};
-			buildConfigurationList = C0403D0324647764006D2C7B /* Build configuration list for PBXProject "PersonalityQuiz" */;
+			buildConfigurationList = C0801DF624665D56001D53CE /* Build configuration list for PBXProject "TipCalculator" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -119,58 +110,55 @@
 				en,
 				Base,
 			);
-			mainGroup = C0403CFF24647763006D2C7B;
-			productRefGroup = C0403D0924647764006D2C7B /* Products */;
+			mainGroup = C0801DF224665D56001D53CE;
+			productRefGroup = C0801DFC24665D56001D53CE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C0403D0724647764006D2C7B /* PersonalityQuiz */,
+				C0801DFA24665D56001D53CE /* TipCalculator */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		C0403D0624647764006D2C7B /* Resources */ = {
+		C0801DF924665D56001D53CE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0403D1824647768006D2C7B /* LaunchScreen.storyboard in Resources */,
-				C0403D1524647768006D2C7B /* Assets.xcassets in Resources */,
-				C0403D1324647764006D2C7B /* Main.storyboard in Resources */,
+				C0801E0B24665D59001D53CE /* LaunchScreen.storyboard in Resources */,
+				C0801E0824665D59001D53CE /* Assets.xcassets in Resources */,
+				C0801E0624665D56001D53CE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C0403D0424647764006D2C7B /* Sources */ = {
+		C0801DF724665D56001D53CE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0403D1024647764006D2C7B /* IntroductionViewController.swift in Sources */,
-				C0403D0C24647764006D2C7B /* AppDelegate.swift in Sources */,
-				C0403D2024649307006D2C7B /* QuestionViewController.swift in Sources */,
-				C0403D242465077D006D2C7B /* QuestionData.swift in Sources */,
-				C0403D2224649345006D2C7B /* ResultsViewController.swift in Sources */,
-				C0403D0E24647764006D2C7B /* SceneDelegate.swift in Sources */,
+				C0801E0324665D56001D53CE /* ViewController.swift in Sources */,
+				C0801DFF24665D56001D53CE /* AppDelegate.swift in Sources */,
+				C0801E0124665D56001D53CE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C0403D1124647764006D2C7B /* Main.storyboard */ = {
+		C0801E0424665D56001D53CE /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C0403D1224647764006D2C7B /* Base */,
+				C0801E0524665D56001D53CE /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		C0403D1624647768006D2C7B /* LaunchScreen.storyboard */ = {
+		C0801E0924665D59001D53CE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C0403D1724647768006D2C7B /* Base */,
+				C0801E0A24665D59001D53CE /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -178,7 +166,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		C0403D1A24647768006D2C7B /* Debug */ = {
+		C0801E0D24665D59001D53CE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -238,7 +226,7 @@
 			};
 			name = Debug;
 		};
-		C0403D1B24647768006D2C7B /* Release */ = {
+		C0801E0E24665D59001D53CE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -292,34 +280,34 @@
 			};
 			name = Release;
 		};
-		C0403D1D24647768006D2C7B /* Debug */ = {
+		C0801E1024665D59001D53CE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = PersonalityQuiz/Info.plist;
+				INFOPLIST_FILE = TipCalculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ciccc.PersonalityQuiz;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ciccc.TipCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		C0403D1E24647768006D2C7B /* Release */ = {
+		C0801E1124665D59001D53CE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = PersonalityQuiz/Info.plist;
+				INFOPLIST_FILE = TipCalculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ciccc.PersonalityQuiz;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ciccc.TipCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -329,25 +317,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C0403D0324647764006D2C7B /* Build configuration list for PBXProject "PersonalityQuiz" */ = {
+		C0801DF624665D56001D53CE /* Build configuration list for PBXProject "TipCalculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C0403D1A24647768006D2C7B /* Debug */,
-				C0403D1B24647768006D2C7B /* Release */,
+				C0801E0D24665D59001D53CE /* Debug */,
+				C0801E0E24665D59001D53CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C0403D1C24647768006D2C7B /* Build configuration list for PBXNativeTarget "PersonalityQuiz" */ = {
+		C0801E0F24665D59001D53CE /* Build configuration list for PBXNativeTarget "TipCalculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C0403D1D24647768006D2C7B /* Debug */,
-				C0403D1E24647768006D2C7B /* Release */,
+				C0801E1024665D59001D53CE /* Debug */,
+				C0801E1124665D59001D53CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = C0403D0024647763006D2C7B /* Project object */;
+	rootObject = C0801DF324665D56001D53CE /* Project object */;
 }
