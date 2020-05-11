@@ -16,7 +16,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var billAmountTextField: UITextField!
     @IBOutlet weak var tipAmountLabel: UILabel!
     
-    @IBOutlet weak var tipPercentageTextField: UITextField!
     @IBOutlet weak var adjustTipPercentage: UISlider!
     @IBOutlet weak var labelPercentage: UILabel!
     
@@ -32,30 +31,25 @@ class ViewController: UIViewController {
     }
     
     @IBAction func ajustPercentageChanged(_ sender: UISlider) {
-        print("percentage changed")
         if let bill = billAmountTextField.text{
             percentage = adjustTipPercentage.value
             print(bill)
             let billAmount = Float(bill)
             let tip = billAmount! * (percentage / 100)
-            tipPercentageTextField.text = String(format : "%.2f", percentage)
-            labelPercentage.text = tipPercentageTextField.text
+            labelPercentage.text = String(format : "%.2f", percentage)
             tipAmountLabel.text = String(format: "$ %.2f", tip )
         }
     }
     
     @IBAction func calculateTip(_ sender: UIButton) {
         if let bill = billAmountTextField.text{
-            if let tipPercentage = tipPercentageTextField.text{
                 print(bill)
                 let billAmount = Float(bill)
-                percentage = Float(tipPercentage)!
+                percentage = adjustTipPercentage.value
                 let tip = billAmount! * (percentage / 100)
                 tipAmountLabel.text = String(format: "%.2f",tip)
                 adjustTipPercentage.setValue(percentage, animated: false)
-                labelPercentage.text = tipPercentage
-            }
-            
+                labelPercentage.text = String(format: "%.2f",percentage)
         }
     }
     
