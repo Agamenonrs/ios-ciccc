@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  EmojiDictionary
+//  Assignment6
 //
-//  Created by Agamenon Rocha Dos Santos on 14/05/20.
+//  Created by Agamenon Rocha Dos Santos on 15/05/20.
 //  Copyright © 2020 Agamenon. All rights reserved.
 //
 

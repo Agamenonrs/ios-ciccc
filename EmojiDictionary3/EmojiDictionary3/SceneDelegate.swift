@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  EmojiDictionary
+//  EmojiDictionary3
 //
 //  Created by Agamenon Rocha Dos Santos on 14/05/20.
 //  Copyright © 2020 Agamenon. All rights reserved.
