@@ -18,9 +18,9 @@ class TodoTableViewController: UITableViewController {
         let second = Todo(title: "Second", todoDescription: "Second Task", isComplete: false, priority: 1)
         let third = Todo(title: "Third", todoDescription: "First Task", isComplete: false,priority: 2)
         
-        var high = Priority(id: 0, name: "High Priority", todoItems: [first])
-        var medium = Priority(id: 1, name: "Medium Priority", todoItems: [second])
-        var low = Priority(id: 2, name: "Low Priority", todoItems: [third])
+        let high = Priority(id: 0, name: "High Priority", todoItems: [first])
+        let medium = Priority(id: 1, name: "Medium Priority", todoItems: [second])
+        let low = Priority(id: 2, name: "Low Priority", todoItems: [third])
         
         return [high,medium,low]
         
@@ -40,7 +40,6 @@ class TodoTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return priorities[section].todoItems.count
     }
     
@@ -50,25 +49,86 @@ class TodoTableViewController: UITableViewController {
         let todo = priorities[fromIndexPath.section].todoItems.remove(at: fromIndexPath.row)
         //priorities[to.section].todoItems.insert(todo, at: to.row)
         priorities[to.section].todoItems.append(todo)
-        print("target size \(priorities[fromIndexPath.section].todoItems.count)")
+        print("source size \(priorities[fromIndexPath.section].todoItems.count)")
         print("target size \(priorities[to.section].todoItems.count)")
  
         tableView.reloadData()
         
     }
     
+    @IBAction func unwindToTodoItemsTableView(segue: UIStoryboardSegue) {
+        print("==== unwind ======")
+        guard segue.identifier == "unwindSave" else {return }
+        print("==== segue is ok ======")
+        guard let sourceViewController = segue.source as? AddTodoItemTableViewController else {return }
+        print("==== sourceViewController is ok ======")
+        guard let todo = sourceViewController.todo else{ return }
+        
+        print("==== todo is ok ======")
+        
+        if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                /*
+                priorities[selectedIndexPath.row] = emoji
+                tableView.reloadRows(at: [selectedIndexPath],
+                with: .none)
+                 */
+        } else {
+                
+            let newIndexPath = IndexPath(row: priorities[1].todoItems.count,
+                section: 1)
+            print(priorities[newIndexPath.section])
+            print(priorities[newIndexPath.section].todoItems)
+            var items = priorities[newIndexPath.section].todoItems
+            items.append(todo)
+            for t in items{
+                print("Item \(t.title)" )
+            }
+            print(items.count)
+            //items.append(todo)
+            
+             
+            priorities[newIndexPath.section].todoItems = items
+            priorities[newIndexPath.section].todoItems.append(todo)
+            print(priorities[newIndexPath.section].todoItems.count)
+            print("section \(newIndexPath.section)")
+            for t in priorities[newIndexPath.section].todoItems{
+                print("Item \(t.title)" )
+            }
+            //self.tableView.reloadData()
+            //self.tableView.beginUpdates()
+            //self.tableView.insertRows(at: [newIndexPath],with: .automatic)
+            //self.tableView.endUpdates()
+                
+        }
+    }
     
-    
-    
+    override func prepare(for segue: UIStoryboardSegue, sender:Any?) {
+        print("Editing")
+        /*
+        if segue.identifier == "EditEmoji" {
+           
+            let indexPath = tableView.indexPathForSelectedRow!
+            let emoji = emojis[indexPath.row]
+            let navController = segue.destination as!
+               UINavigationController
+            let addEditEmojiTableViewController =
+               navController.topViewController as!
+               AddEditEmojiTableViewController
+     
+            addEditEmojiTableViewController.emoji = emoji
+ 
+        }
+ */
+    }
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "todoItemsCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "todoItemsCell", for: indexPath) as! TodoItemsTableViewCell
         
         let prioritie = priorities[indexPath.section]
         let todo = prioritie.todoItems[indexPath.row]
 
         
-        cell.textLabel?.text = todo.title
-        cell.detailTextLabel?.text = todo.todoDescription
+        cell.update(todo: todo)
         cell.showsReorderControl = true
         return cell
         
