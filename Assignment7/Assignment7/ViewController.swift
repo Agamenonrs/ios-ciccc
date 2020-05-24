@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var customNavBar: UIView!
     @IBOutlet weak var plusButton: UIButton!
     @IBOutlet weak var tbView: UITableView!
@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         
         tbView.delegate = self
         tbView.dataSource = self
-
+        //        tbView.topAnchor.constraint(equalTo: customNavBar.bottomAnchor, constant: 5).isActive = true
         let imag1 = UIImageView(image: #imageLiteral(resourceName: "ramen"))
         let imag2 = UIImageView(image: #imageLiteral(resourceName: "pizza_pockets"))
         let imag3 = UIImageView(image: #imageLiteral(resourceName: "popsicle"))
@@ -58,12 +58,13 @@ class ViewController: UIViewController {
         customNavBar.addSubview(vStackView)
         
         NSLayoutConstraint.activate([
-             vStackView.centerXAnchor.constraint(equalTo: customNavBar.centerXAnchor),
+            vStackView.centerXAnchor.constraint(equalTo: customNavBar.centerXAnchor),
             // vStackView.centerYAnchor.constraint(equalTo: customNavBar.centerYAnchor),
             vStackView.bottomAnchor.constraint(equalTo: customNavBar.bottomAnchor, constant: -20),
-             vStackView.heightAnchor.constraint(equalToConstant: customNavBar.frame.height - 20),
+            vStackView.heightAnchor.constraint(equalToConstant: customNavBar.frame.height - 20),
             vStackView.widthAnchor.constraint(equalToConstant: customNavBar.frame.width)
-          ])
+            
+        ])
         
     }
     
@@ -76,50 +77,51 @@ class ViewController: UIViewController {
     }
     
     @IBAction func plusButtonClick(_ sender: Any) {
-         UIView.animate(withDuration: 1, delay: 0.5, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
-                          self.plusButton.transform = CGAffineTransform(rotationAngle: 90)
-                                if !self.isOpen {
-                                   
-                                self.customNavBar.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 200)
-                               self.isOpen = true
-                               self.vStackView.isHidden = false
-                                }else {
-                                    print("close view")
-                                    self.customNavBar.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 88)
-                                    self.isOpen = false
-                                   self.vStackView.isHidden = true
-                                }
-                            self.view.layoutIfNeeded()
-                          }){ (_) in
-                            UIView.animate(withDuration: 0.1) {
-                                self.plusButton.transform = .identity
-                            }
-               }
-    }
-    
-    func exemplo4(){
-               UIView.animate(withDuration: 1, delay: 0.5, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
-                   self.plusButton.transform = CGAffineTransform(rotationAngle: 90)
-                         if !self.isOpen {
-                            
-                         self.customNavBar.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 200)
-                        self.isOpen = true
-                        self.vStackView.isHidden = false
-                         }else {
-                             print("close view")
-                             self.customNavBar.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 88)
-                             self.isOpen = false
-                            self.vStackView.isHidden = true
-                         }
-                     self.view.layoutIfNeeded()
-                   }){ (_) in
-                     UIView.animate(withDuration: 0.1) {
-                         self.plusButton.transform = .identity
-                     }
+        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+            self.plusButton.transform = CGAffineTransform(rotationAngle: 90)
+            if !self.isOpen {
+                self.tbView.layoutIfNeeded()
+                
+                self.customNavBar.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 200)
+                self.isOpen = true
+                self.vStackView.isHidden = false
+            }else {
+                print("close view")
+                self.customNavBar.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 88)
+                self.isOpen = false
+                self.vStackView.isHidden = true
+            }
+            self.view.layoutIfNeeded()
+        }){ (_) in
+            UIView.animate(withDuration: 0.3) {
+                self.plusButton.transform = .identity
+            }
         }
     }
     
-
+    func exemplo4(){
+        UIView.animate(withDuration: 1, delay: 0.5, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+            self.plusButton.transform = CGAffineTransform(rotationAngle: 90)
+            if !self.isOpen {
+                
+                self.customNavBar.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 200)
+                self.isOpen = true
+                self.vStackView.isHidden = false
+            }else {
+                print("close view")
+                self.customNavBar.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 88)
+                self.isOpen = false
+                self.vStackView.isHidden = true
+            }
+            self.view.layoutIfNeeded()
+        }){ (_) in
+            UIView.animate(withDuration: 0.1) {
+                self.plusButton.transform = .identity
+            }
+        }
+    }
+    
+    
 }
 
 extension ViewController: UITableViewDelegate{
