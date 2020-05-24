@@ -11,13 +11,18 @@ import UIKit
 class AddTodoItemTableViewController: UITableViewController {
     
     @IBOutlet weak var todoTitleTextField: UITextField!
+    
+    @IBOutlet weak var todoDescriptionTextField: UITextField!
+    
     var todo : Todo?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if let todo = todo {
+            print("viewDidLoad \(todo.indexPath)")
             todoTitleTextField.text = todo.title
+            todoDescriptionTextField.text = todo.todoDescription
             
         }
     }
@@ -27,7 +32,10 @@ class AddTodoItemTableViewController: UITableViewController {
         super.prepare(for: segue, sender: sender)
         guard segue.identifier == "unwindSave" else { return }
         let title = todoTitleTextField.text ?? ""
-        todo = Todo(title: title, todoDescription: "Teste", isComplete: false, priority: 1)
+        let todoDescription = todoDescriptionTextField.text ?? ""
+        let customIndexPath = todo?.indexPath
+        todo = Todo(title: title, todoDescription: todoDescription, isComplete: false, priority: 1)
+        todo?.indexPath = customIndexPath ?? CustomIndexPath(row: -1, section: -1)
         print("prepare save endS")
     }
 

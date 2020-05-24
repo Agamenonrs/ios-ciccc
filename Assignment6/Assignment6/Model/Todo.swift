@@ -8,11 +8,14 @@
 
 import Foundation
 
-class Todo {
+struct Todo {
     var title: String
     var todoDescription: String
     var isComplete: Bool
     var priority : Int
+    var checked = false
+    var indexPath : CustomIndexPath = CustomIndexPath()
+
     
     init(title : String, todoDescription: String, isComplete : Bool, priority : Int ) {
         self.title = title

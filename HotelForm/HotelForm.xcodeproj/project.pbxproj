@@ -1,0 +1,381 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C00ABBBD2474DEAF00B955A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00ABBBC2474DEAF00B955A7 /* AppDelegate.swift */; };
+		C00ABBBF2474DEAF00B955A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00ABBBE2474DEAF00B955A7 /* SceneDelegate.swift */; };
+		C00ABBC62474DEB100B955A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C00ABBC52474DEB100B955A7 /* Assets.xcassets */; };
+		C00ABBC92474DEB100B955A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C00ABBC72474DEB100B955A7 /* LaunchScreen.storyboard */; };
+		C00ABBD12474DFDC00B955A7 /* RegistrationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00ABBD02474DFDC00B955A7 /* RegistrationTableViewController.swift */; };
+		C00ABBD52474E3BA00B955A7 /* AddRegistrationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00ABBD42474E3BA00B955A7 /* AddRegistrationTableViewController.swift */; };
+		C00ABBD72474E9A600B955A7 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00ABBD62474E9A600B955A7 /* TextFieldTableViewCell.swift */; };
+		C00ABBDC2474EBCF00B955A7 /* VerticalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00ABBD92474EBCF00B955A7 /* VerticalStackView.swift */; };
+		C00ABBDD2474EBCF00B955A7 /* UIView+ConstraintLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00ABBDA2474EBCF00B955A7 /* UIView+ConstraintLayout.swift */; };
+		C00ABBDE2474EBCF00B955A7 /* HorizontalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00ABBDB2474EBCF00B955A7 /* HorizontalStackView.swift */; };
+		C00ABBE32474F1B400B955A7 /* DateLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00ABBE22474F1B400B955A7 /* DateLabelTableViewCell.swift */; };
+		C00ABBE52474F26C00B955A7 /* DatePickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00ABBE42474F26C00B955A7 /* DatePickerTableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C00ABBB92474DEAF00B955A7 /* HotelForm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotelForm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C00ABBBC2474DEAF00B955A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C00ABBBE2474DEAF00B955A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C00ABBC52474DEB100B955A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C00ABBC82474DEB100B955A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C00ABBCA2474DEB100B955A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C00ABBD02474DFDC00B955A7 /* RegistrationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationTableViewController.swift; sourceTree = "<group>"; };
+		C00ABBD42474E3BA00B955A7 /* AddRegistrationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRegistrationTableViewController.swift; sourceTree = "<group>"; };
+		C00ABBD62474E9A600B955A7 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
+		C00ABBD92474EBCF00B955A7 /* VerticalStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VerticalStackView.swift; path = ../../../../Solutions/HotelForm_parte3/HotelForm/Utils/VerticalStackView.swift; sourceTree = "<group>"; };
+		C00ABBDA2474EBCF00B955A7 /* UIView+ConstraintLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+ConstraintLayout.swift"; path = "../../../../Solutions/HotelForm_parte3/HotelForm/Utils/UIView+ConstraintLayout.swift"; sourceTree = "<group>"; };
+		C00ABBDB2474EBCF00B955A7 /* HorizontalStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HorizontalStackView.swift; path = ../../../../Solutions/HotelForm_parte3/HotelForm/Utils/HorizontalStackView.swift; sourceTree = "<group>"; };
+		C00ABBE22474F1B400B955A7 /* DateLabelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateLabelTableViewCell.swift; sourceTree = "<group>"; };
+		C00ABBE42474F26C00B955A7 /* DatePickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTableViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C00ABBB62474DEAF00B955A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C00ABBB02474DEAF00B955A7 = {
+			isa = PBXGroup;
+			children = (
+				C00ABBBB2474DEAF00B955A7 /* HotelForm */,
+				C00ABBBA2474DEAF00B955A7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C00ABBBA2474DEAF00B955A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C00ABBB92474DEAF00B955A7 /* HotelForm.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C00ABBBB2474DEAF00B955A7 /* HotelForm */ = {
+			isa = PBXGroup;
+			children = (
+				C00ABBE12474ECA400B955A7 /* add */,
+				C00ABBE02474EC0200B955A7 /* views */,
+				C00ABBD82474EAA200B955A7 /* Utils */,
+				C00ABBBC2474DEAF00B955A7 /* AppDelegate.swift */,
+				C00ABBBE2474DEAF00B955A7 /* SceneDelegate.swift */,
+				C00ABBD02474DFDC00B955A7 /* RegistrationTableViewController.swift */,
+				C00ABBC52474DEB100B955A7 /* Assets.xcassets */,
+				C00ABBC72474DEB100B955A7 /* LaunchScreen.storyboard */,
+				C00ABBCA2474DEB100B955A7 /* Info.plist */,
+			);
+			path = HotelForm;
+			sourceTree = "<group>";
+		};
+		C00ABBD82474EAA200B955A7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C00ABBDB2474EBCF00B955A7 /* HorizontalStackView.swift */,
+				C00ABBDA2474EBCF00B955A7 /* UIView+ConstraintLayout.swift */,
+				C00ABBD92474EBCF00B955A7 /* VerticalStackView.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		C00ABBE02474EC0200B955A7 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				C00ABBD62474E9A600B955A7 /* TextFieldTableViewCell.swift */,
+				C00ABBE22474F1B400B955A7 /* DateLabelTableViewCell.swift */,
+				C00ABBE42474F26C00B955A7 /* DatePickerTableViewCell.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		C00ABBE12474ECA400B955A7 /* add */ = {
+			isa = PBXGroup;
+			children = (
+				C00ABBD42474E3BA00B955A7 /* AddRegistrationTableViewController.swift */,
+			);
+			path = add;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C00ABBB82474DEAF00B955A7 /* HotelForm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C00ABBCD2474DEB100B955A7 /* Build configuration list for PBXNativeTarget "HotelForm" */;
+			buildPhases = (
+				C00ABBB52474DEAF00B955A7 /* Sources */,
+				C00ABBB62474DEAF00B955A7 /* Frameworks */,
+				C00ABBB72474DEAF00B955A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HotelForm;
+			productName = HotelForm;
+			productReference = C00ABBB92474DEAF00B955A7 /* HotelForm.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C00ABBB12474DEAF00B955A7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = Agamenon;
+				TargetAttributes = {
+					C00ABBB82474DEAF00B955A7 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+				};
+			};
+			buildConfigurationList = C00ABBB42474DEAF00B955A7 /* Build configuration list for PBXProject "HotelForm" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C00ABBB02474DEAF00B955A7;
+			productRefGroup = C00ABBBA2474DEAF00B955A7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C00ABBB82474DEAF00B955A7 /* HotelForm */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C00ABBB72474DEAF00B955A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C00ABBC92474DEB100B955A7 /* LaunchScreen.storyboard in Resources */,
+				C00ABBC62474DEB100B955A7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C00ABBB52474DEAF00B955A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C00ABBDD2474EBCF00B955A7 /* UIView+ConstraintLayout.swift in Sources */,
+				C00ABBE32474F1B400B955A7 /* DateLabelTableViewCell.swift in Sources */,
+				C00ABBBD2474DEAF00B955A7 /* AppDelegate.swift in Sources */,
+				C00ABBDC2474EBCF00B955A7 /* VerticalStackView.swift in Sources */,
+				C00ABBD12474DFDC00B955A7 /* RegistrationTableViewController.swift in Sources */,
+				C00ABBD52474E3BA00B955A7 /* AddRegistrationTableViewController.swift in Sources */,
+				C00ABBBF2474DEAF00B955A7 /* SceneDelegate.swift in Sources */,
+				C00ABBD72474E9A600B955A7 /* TextFieldTableViewCell.swift in Sources */,
+				C00ABBDE2474EBCF00B955A7 /* HorizontalStackView.swift in Sources */,
+				C00ABBE52474F26C00B955A7 /* DatePickerTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C00ABBC72474DEB100B955A7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C00ABBC82474DEB100B955A7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C00ABBCB2474DEB100B955A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C00ABBCC2474DEB100B955A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C00ABBCE2474DEB100B955A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HotelForm/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ciccc.HotelForm;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C00ABBCF2474DEB100B955A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HotelForm/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ciccc.HotelForm;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C00ABBB42474DEAF00B955A7 /* Build configuration list for PBXProject "HotelForm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C00ABBCB2474DEB100B955A7 /* Debug */,
+				C00ABBCC2474DEB100B955A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C00ABBCD2474DEB100B955A7 /* Build configuration list for PBXNativeTarget "HotelForm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C00ABBCE2474DEB100B955A7 /* Debug */,
+				C00ABBCF2474DEB100B955A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C00ABBB12474DEAF00B955A7 /* Project object */;
+}

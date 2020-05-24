@@ -8,24 +8,31 @@
 
 import UIKit
 
+protocol ChangeButton {
+    func changeButton(check : Bool, indexPath: CustomIndexPath)
+}
+
 class TodoItemsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var todoTileLabel: UILabel!
     @IBOutlet weak var todoDescriptionLabel: UILabel!
     
+    @IBOutlet weak var checkboxButton: UIButton!
+    
+    var delegate : ChangeButton?
+    var indexPath : CustomIndexPath?
+    var todoItems : [Todo]?
+    
     func update(todo : Todo){
         todoTileLabel.text = todo.title
         todoDescriptionLabel.text = todo.todoDescription
     }
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+
+    @IBAction func checboxAction(_ sender: UIButton) {
+        if todoItems![indexPath!.row].checked {
+            delegate?.changeButton(check: false, indexPath: indexPath!)
+        }else{
+            delegate?.changeButton(check: true, indexPath: indexPath!)
+        }
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }

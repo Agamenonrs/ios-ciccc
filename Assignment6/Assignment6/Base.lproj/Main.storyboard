@@ -22,26 +22,30 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="41.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sFe-iU-2Cg">
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="sFe-iU-2Cg">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="41.5"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="😀" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ng1-uX-3HF">
-                                                    <rect key="frame" x="0.0" y="0.0" width="27" height="41.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="liO-ps-s84">
+                                                    <rect key="frame" x="0.0" y="8.5" width="25" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="kAJ-ut-KBW"/>
+                                                    </constraints>
+                                                    <state key="normal" backgroundImage="circle-empty"/>
+                                                    <connections>
+                                                        <action selector="checboxAction:" destination="Ge6-gb-LDF" eventType="touchUpInside" id="K1A-97-2Tl"/>
+                                                    </connections>
+                                                </button>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="pHe-sl-kU7">
-                                                    <rect key="frame" x="27" y="0.0" width="387" height="41.5"/>
+                                                    <rect key="frame" x="30" y="0.5" width="384" height="41"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="364-db-Z69">
-                                                            <rect key="frame" x="0.0" y="0.0" width="387" height="21"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="384" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3kw-eO-gPF">
-                                                            <rect key="frame" x="0.0" y="21" width="387" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="20.5" width="384" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -59,6 +63,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="checkboxButton" destination="liO-ps-s84" id="ElT-mc-xUb"/>
                                     <outlet property="todoDescriptionLabel" destination="3kw-eO-gPF" id="Ka1-AT-652"/>
                                     <outlet property="todoTileLabel" destination="364-db-Z69" id="Q0I-kh-XZU"/>
                                 </connections>
@@ -75,16 +80,27 @@
                                 <action selector="editButtonTapped:" destination="u8z-6g-WO9" id="5lB-lI-9wF"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="IpI-N0-PdU">
-                            <connections>
-                                <segue destination="wDD-8R-OHZ" kind="show" identifier="addSegue" id="a29-pY-9Zh"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="IpI-N0-PdU">
+                                <connections>
+                                    <segue destination="wDD-8R-OHZ" kind="show" identifier="addSegue" id="a29-pY-9Zh"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Delete" id="vo9-gC-iVw">
+                                <connections>
+                                    <action selector="deleteAction:" destination="u8z-6g-WO9" id="VIX-up-Syh"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="deleteItems" destination="vo9-gC-iVw" id="CZn-8b-D0S"/>
+                        <segue destination="wDD-8R-OHZ" kind="show" identifier="editSegue" id="6SI-co-RAr"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pkV-hO-TxP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1275" y="-702"/>
+            <point key="canvasLocation" x="1258" y="-702"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="f1d-Fy-AQE">
@@ -120,6 +136,31 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Description" id="dr8-kd-Obt">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="rUS-2W-qSU">
+                                        <rect key="frame" x="0.0" y="155" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rUS-2W-qSU" id="mcw-11-bEG">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UPC-gg-RqE">
+                                                    <rect key="frame" x="15" y="5" width="384" height="34"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="UPC-gg-RqE" secondAttribute="trailing" constant="15" id="33U-M4-sog"/>
+                                                <constraint firstAttribute="bottom" secondItem="UPC-gg-RqE" secondAttribute="bottom" constant="5" id="7qR-yZ-YBP"/>
+                                                <constraint firstItem="UPC-gg-RqE" firstAttribute="leading" secondItem="mcw-11-bEG" secondAttribute="leading" constant="15" id="9WL-aV-YSe"/>
+                                                <constraint firstItem="UPC-gg-RqE" firstAttribute="top" secondItem="mcw-11-bEG" secondAttribute="top" constant="5" id="cVN-3D-fpK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="No1-6R-4bf" id="4ny-Vl-OxM"/>
@@ -139,6 +180,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="todoDescriptionTextField" destination="UPC-gg-RqE" id="Ilb-lf-OUU"/>
                         <outlet property="todoTitleTextField" destination="kTj-3f-VKb" id="QUe-O9-naW"/>
                     </connections>
                 </tableViewController>
@@ -181,4 +223,10 @@
             <point key="canvasLocation" x="369" y="-702"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="a29-pY-9Zh"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="circle-empty" width="25" height="25"/>
+    </resources>
 </document>

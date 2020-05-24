@@ -8,15 +8,19 @@
 
 import Foundation
 
-class Priority{
+struct Priority{
     var id : Int = 1
     var name : String = "Medium Priority"
-    var todoItems : [Todo]
+    var todoItems : [Todo] = []
     
+    
+    
+    /*
     init(id : Int, name : String, todoItems : [Todo]) {
         self.id = id
         self.name = name
         self.todoItems = todoItems
     }
+     S*/
     
 }
