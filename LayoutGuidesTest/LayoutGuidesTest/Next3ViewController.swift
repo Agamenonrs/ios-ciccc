@@ -25,7 +25,7 @@ class Next3ViewController: UIViewController {
     @IBAction func startAnimationAction(_ sender: Any) {
         UIView.animate(withDuration: 0.5, delay: 0.5, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
             if self.labelPositionisLeft {
-                self.label.center.x = self.view.bounds.width - 100
+                self.label.center.y = self.view.bounds.height - 100
             }
             else {
                 self.label.center.x = 100

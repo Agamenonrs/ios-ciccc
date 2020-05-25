@@ -28,6 +28,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         customNavBar.backgroundColor = .lightGray
+        tbView.frame = CGRect(x: 0, y: 90, width: self.view.frame.size.width,
+                              height: self.view.frame.size.height - 90)
         
         tbView.delegate = self
         tbView.dataSource = self
@@ -81,12 +83,17 @@ class ViewController: UIViewController {
             self.plusButton.transform = CGAffineTransform(rotationAngle: 90)
             if !self.isOpen {
                 self.tbView.layoutIfNeeded()
-                
+                //self.tbView.center.y = self.view.bounds.height - 202
+                self.tbView.frame = CGRect(x: 0, y: 198, width: self.view.frame.size.width,
+                                           height: self.view.frame.size.height - 198)
                 self.customNavBar.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 200)
                 self.isOpen = true
                 self.vStackView.isHidden = false
             }else {
                 print("close view")
+                //self.tbView.center.y = self.view.bounds.height - 110
+                self.tbView.frame = CGRect(x: 0, y: 90, width: self.view.frame.size.width,
+                                           height: self.view.frame.size.height - 90)
                 self.customNavBar.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 88)
                 self.isOpen = false
                 self.vStackView.isHidden = true
